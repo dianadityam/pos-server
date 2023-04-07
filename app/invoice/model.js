@@ -13,11 +13,13 @@ const invoiceSchema = Schema({
     },
 
     delivery_adress: {
-        provinsi: { type: String, required: [true, 'provinsi must be field'] },
-        kota: { type: String, required: [true, 'kota must be field'] },
-        kecamatan: { type: String, required: [true, 'kecamatan must be field'] },
-        kelurahan: { type: String, required: [true, 'kelurahan must be field'] },
-        detail: { type: String }
+        type: Schema.Types.ObjectId,
+        ref: 'DeliveryAddress'
+        // provinsi: { type: String, required: [true, 'provinsi must be field'] },
+        // kota: { type: String, required: [true, 'kota must be field'] },
+        // kecamatan: { type: String, required: [true, 'kecamatan must be field'] },
+        // kelurahan: { type: String, required: [true, 'kelurahan must be field'] },
+        // detail: { type: String }
     },
 
     total: {

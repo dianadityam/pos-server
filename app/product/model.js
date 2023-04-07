@@ -8,7 +8,7 @@ const productSchema = Schema({
         minlength: [3, 'Name must contain at least 3 characters']
     },
 
-    descriprtion: {
+    description: {
         type: String,
         maxlength: [1000, 'Description contain at most 1000 characters']
     },
